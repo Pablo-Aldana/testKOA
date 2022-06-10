@@ -20,7 +20,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <meta property="og:title" content="VIVE71"/>
 <meta property="og:description" content="Somos la tentación que te invita a salir de casa, disfrutar de tu ciudad y VIVIR"/>
 <meta property="og:image:type" content="image/jpeg" />
-<!--<meta property="og:image" content="http://192.168.68.114:3000/uploads/Screenshot_2022_06_01_20_51_28_mz_T_Lrq_049c151b2d.png?updated_at=2022-06-01T18:51:57.785Z"/>-->
+<meta property="og:image" content="http://192.168.68.114:3000/uploads/Screenshot_2022_06_01_20_51_28_mz_T_Lrq_049c151b2d.png?updated_at=2022-06-01T18:51:57.785Z"/>
 
 <!-- Twitter Meta Tags 
 <meta name="twitter:card" content="summary_large_image">
@@ -40,6 +40,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 `;
 const redirect = async function (ctx, next) {
+  console.log(ctx);
   if (ctx.request.url === '/') {
     ctx.body = htmlBody;
   } else {
